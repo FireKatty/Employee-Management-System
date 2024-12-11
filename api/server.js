@@ -3,8 +3,15 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const path = require("path");
 const app = express();
+// Enable CORS for all origins or specific origins
+app.use(cors({
+    origin: "https://mern-project-woad-kappa.vercel.app", // Replace with your frontend URL on Vercel
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary methods
+    allowedHeaders: ["Content-Type", "Authorization"] // Allow specific headers
+  })
+);
 
-app.use(cors());
+
 app.use(express.json());
 dotenv.config();
 
