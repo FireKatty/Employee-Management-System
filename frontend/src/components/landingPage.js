@@ -25,7 +25,7 @@ const Header = styled('header')({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  borderBottom: "1px solid #333",
+  // borderBottom: "1px solid #333",
   position: "sticky",
   top: 0,
   zIndex: 100,
@@ -52,9 +52,10 @@ const HeaderLink = styled(MuiLink)({
 const Hero = styled('section')({
   position: "relative",
   textAlign: "center",
-  height: "80vh", 
+  // height: "100vh", 
   background: "url(https://vrvsecurity.in/static/media/4.f35312466d6e3457f39e.png) center/cover no-repeat",
   color: "#fff",
+  minHeight:"100vh"
 });
 
 const HeroOverlay = styled('div')({
@@ -276,7 +277,13 @@ function Front() {
 
   return (
     <Root>
-      <Header>
+      <Hero >
+      <Header sx={{
+          zIndex: 1201,
+          backgroundColor: "#2c3e50", // Custom dark color
+          // boxShadow: "0px 4px 10px rgba(0, 0, 0, 0)",
+          background: "rgba(0,0,.0,0)"
+        }} > 
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <img 
             src="https://vrvsecurity.in/static/media/favicon.cc3b0694d956aaccd51d.ico" 
@@ -296,7 +303,7 @@ function Front() {
         </HeaderLinks>
       </Header>
 
-      <Hero>
+      
         <HeroOverlay>
           <HeroText>Protect Your Digital World</HeroText>
           <StyledButton onClick={() => handleModalOpen("login")}>Get Started</StyledButton>
