@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd rbac-ui && npm install && npm run build",
+  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "rbac-ui/build",
   "framework": "create-react-app",
   "rewrites": [
