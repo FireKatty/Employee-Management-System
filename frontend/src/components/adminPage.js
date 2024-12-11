@@ -84,7 +84,7 @@ const AdminDashboard = () => {
     setErrors({});
     const permissions = getPermissionsForRole(newUser.role);
     try {
-      const response = await fetch("https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/create", {
+      const response = await fetch("https://mern-project-woad-kappa.vercel.app/api/data/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -110,7 +110,7 @@ const AdminDashboard = () => {
   const fetchUsersFromDatabase = async () => {
     try {
       console.log("fetch apii run");
-      const response = await fetch("https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/list", {
+      const response = await fetch("https://mern-project-woad-kappa.vercel.app/api/data/list", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const AdminDashboard = () => {
     const permissions = getPermissionsForRole(editingUser.role) || [];
 
     try {
-      const response = await fetch(`https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/update/${editingUser.id}`, {
+      const response = await fetch(`https://mern-project-woad-kappa.vercel.app/api/data/update/${editingUser.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -184,7 +184,7 @@ const AdminDashboard = () => {
   const handleDeleteUser = async (id) => {
     try {
       console.log({ name: "runapii", id });
-      const response = await fetch(`https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/delete/${id}`, {
+      const response = await fetch(`https://mern-project-woad-kappa.vercel.app/api/data/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -205,7 +205,7 @@ const AdminDashboard = () => {
 
   const toggleUserStatus = async (id) => {
     try {
-      const response = await fetch(`https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/toggleStatus/${id}`, {
+      const response = await fetch(`https://mern-project-woad-kappa.vercel.app/api/data/toggleStatus/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -237,7 +237,7 @@ const AdminDashboard = () => {
     );
 
     try {
-      const response = await fetch(`https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/data/editrole/${id}`, {
+      const response = await fetch(`https://mern-project-woad-kappa.vercel.app/api/data/editrole/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
