@@ -34,7 +34,7 @@ const Login = ({onSwitch}) => {
     console.log(loginData)
     try {
       // Fetch API to authenticate the user
-      const response = await fetch("https://vercel.com/abhishek-katiyars-projects-97d0705a/mern-project/api/auth/login", {
+      const response = await fetch("https://mern-project-s3nb.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
