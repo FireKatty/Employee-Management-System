@@ -21,5 +21,5 @@ app.use('/api/data',dataRoutes);
 
 app.listen(PORT,()=>{
     connectToDatabase();
-    console.log("server is started")
+    console.log("server is started" + PORT)
 });
