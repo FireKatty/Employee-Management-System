@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 // Enable CORS for all origins or specific origins
 app.use(cors({
-    origin: "https://mern-project-s3nb.onrender.com", // Replace with your frontend URL on Vercel
+    origin: "https://mern-project--rho.vercel.app/", // Replace with your frontend URL on Vercel
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary methods
     allowedHeaders: ["Content-Type", "Authorization"] // Allow specific headers
   })
