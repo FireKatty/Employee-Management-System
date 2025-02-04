@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 // Enable CORS for all origins or specific origins
 app.use(cors({
-    origin: "https://employee-management-system-six-rho.vercel.app/", // Replace with your frontend URL on Vercel
+    origin: "https://employee-management-system-six-rho.vercel.app", // Replace with your frontend URL on Vercel
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary methods
     allowedHeaders: ["Content-Type", "Authorization"] // Allow specific headers
   })
